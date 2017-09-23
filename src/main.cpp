@@ -55,7 +55,7 @@ int main()
           double speed = std::stod(j[1]["speed"].get<std::string>());
           double angle = std::stod(j[1]["steering_angle"].get<std::string>());
 		  double steer_value=0;
-		  double thr = 03
+		  double thr = 0.3;
           /*
           * TODO: Calcuate steering value here, remember the steering value is
           * [-1, 1].
@@ -72,9 +72,9 @@ int main()
 			  thr = 0.3;
 		  if (cte > 0.4 && speed > 15)
 			  thr = -0.1;
-		  if steer_value > 0.8
+		  if (steer_value > 0.8)
 			  steer_value = 0.8;
-		  if steer_value < -0.8
+		  if (steer_value < -0.8)
 			  steer_value = -0.8;
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
 
