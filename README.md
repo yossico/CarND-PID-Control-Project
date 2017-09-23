@@ -5,6 +5,16 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## Dependencies
 
+The car completes a full lap with very basic control and limited speed
+
+PID controller is based on three error types
+
+Basie setting basic values based on trial and error and the walkthrough I used two basic steps to avoid large oscillations:
+1)	Limited speed – lowering throttle to zero above a predefined speed
+2)	Breaking – setting throttle to -0.1 when the error + speed together are above a predefined level
+3)	Limited turning angle which also limits oscillations however it also limits the ability to steer in high speed
+
+
 * cmake >= 3.5
  * All OSes: [click here for installation instructions](https://cmake.org/install/)
 * make >= 4.1(mac, linux), 3.81(Windows)
