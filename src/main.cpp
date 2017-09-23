@@ -72,6 +72,10 @@ int main()
 			  thr = 0.3;
 		  if (cte > 0.4 && speed > 15)
 			  thr = -0.1;
+		  if steer_value > 0.8
+			  steer_value = 0.8;
+		  if steer_value < -0.8
+			  steer_value = -0.8;
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
 
           json msgJson;
